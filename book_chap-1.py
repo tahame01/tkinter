@@ -12,6 +12,7 @@ name = tk.StringVar()
 def clicked():
     label1.configure(text='Hello '+ name.get(),background='yellow')
     button1.configure(state='disabled')
+    button1.configure(text='cant click me now')
 
 
 label1 = ttk.Label(win,text='Please input your name please ')
