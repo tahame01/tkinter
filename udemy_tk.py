@@ -19,8 +19,8 @@ username.pack(side='left')
 username.focus()
 
 
-
-button1 = ttk.Button(root,text='click me',command=button1,padding=(10,20))#using padding inside ttk
+# tk button got 'bg' property not ttk??
+button1 = tk.Button(root,text='click me',command=button1,bg='green')#using padding inside ttk
 button1.pack(side='top',fill='x',expand=True)
 button2 = ttk.Button(root,text='exit',command=root.destroy)
 button2.pack(side='left',fill='y')
