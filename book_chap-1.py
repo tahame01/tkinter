@@ -7,12 +7,14 @@ win = tk.Tk()
 win.title('test window')
 
 name = tk.StringVar()
+number = tk.StringVar()
 
 
 def clicked():
-    label1.configure(text='Hello '+ name.get(),background='yellow')
-    button1.configure(state='disabled')
-    button1.configure(text='cant click me now')
+     label1.configure(text='Hello '+ name.get(),background='yellow')
+     button1.configure(state='disabled')
+     button1.configure(text='cant click me now')
+     print(number.get())
 
 
 label1 = ttk.Label(win,text='Please input your name please ')
@@ -26,13 +28,13 @@ text_entry.focus()
 button1 = ttk.Button(win,text='submit',command=clicked)
 button1.grid(row=2,column=0)
 
-combo_box = ttk.Combobox(text='select a number:',values=(1,2,3,4))
+combo_box = ttk.Combobox(text='select a number:',values=(1,2,3,4),textvariable=number)
 combo_box.grid(row=3,column=0)
-combo_box.current=0
+combo_box.current(0)
 
 
-button2 = ttk.Button(win,text='close',command=win.destroy)
-button2.grid(row=4,column=0)
+# button2 = ttk.Button(win,text='close',command=win.destroy)
+# button2.grid(row=4,column=0)
 
 
 
