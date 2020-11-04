@@ -26,12 +26,12 @@ text.focus()
 
 #check insert not capital
 text.insert('1.0','Please input something---')
-
+text_input = text.get('1.0','end' )
 text.pack()
 label.pack()
 
 button =ttk.Button(root,text='submit').pack()
-
+print(text_input)
 
 
 
