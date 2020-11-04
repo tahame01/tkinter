@@ -14,11 +14,16 @@ root = tk.Tk()
 
 textVar = tk.StringVar()
 
-image = Image.open('hack.jpg').resize((500,500))
+image = Image.open('hack.jpg').resize((50,50))
 photo = ImageTk.PhotoImage(image)
 
 label = ttk.Label(root,image=photo,padding=10,textvariable=textVar,compound='right')
 textVar.set('hello paikhana')
+
+# Remember that if you pack early u can't use further commands
+text = tk.Text(root,height=8)
+text.pack()
+text.focus()
 
 label.pack()
 
