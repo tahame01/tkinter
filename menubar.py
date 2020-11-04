@@ -1,7 +1,7 @@
 import tkinter as tk 
 from tkinter import ttk 
 from tkinter import Menu 
-
+from tkinter import messagebox as msg 
 
 root = tk.Tk()
 
@@ -16,6 +16,12 @@ def _quit():
     root.quit()
     root.destroy()
     exit()
+
+#Adding message box
+
+def _message():
+    msg.showinfo('Hello buddy just trying to checkout the message box!!')
+
 
 
 #Creating menubar
@@ -36,14 +42,12 @@ data_menu.add_command(label='Graph')
 
 #Creating exit menu
 exit_menu = Menu(menu_bar,tearoff=0)
+exit_menu.add_command(label='help',command=_message)
 exit_menu.add_command(label='quit',command=_quit)
 
 menu_bar.add_cascade(label='File',menu=file_menu)
 menu_bar.add_cascade(label='Data',menu=data_menu)
 menu_bar.add_cascade(label='Exit',menu=exit_menu)
-
-
-
 
 
 
