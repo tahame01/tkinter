@@ -11,10 +11,15 @@ except:
 
 root = tk.Tk()
 
+
+textVar = tk.StringVar()
+
 image = Image.open('hack.jpg').resize((500,500))
 photo = ImageTk.PhotoImage(image)
 
-label = ttk.Label(root,image=photo,padding=10,text='Hacker buddy!!',compound='right')
+label = ttk.Label(root,image=photo,padding=10,textvariable=textVar,compound='right')
+textVar.set('hello paikhana')
+
 label.pack()
 
 button =ttk.Button(root,text='submit').pack()
