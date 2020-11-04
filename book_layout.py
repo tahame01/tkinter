@@ -3,11 +3,21 @@ from tkinter import ttk
 
 root = tk.Tk()
 
-button_frame = ttk.LabelFrame(root,text='')
-button_frame.grid(column=0,row=7,padx=40,pady=40)
+
+
+
+
+try:
+    from ctypes import windll
+    windll.shcore.SetProcessDpiAwareness(1)
+except:
+    pass
 
 # sticky property will act like text-align property
 
+
+button_frame = ttk.LabelFrame(root,text='')
+button_frame.grid(column=0,row=7,padx=40,pady=40)
 
 # label1 = ttk.Label(button_frame,text='label1').grid(row=0,column=0)
 # label2 = ttk.Label(button_frame,text='label2').grid(row=0,column=1)
