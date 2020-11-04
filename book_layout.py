@@ -14,8 +14,8 @@ button_frame.grid(column=0,row=7,padx=40,pady=40)
 # label3 = ttk.Label(button_frame,text='label3').grid(row=0,column=2)
 
 
-label1 = ttk.Label(button_frame,text='label1').grid(row=0,column=0)
-label2 = ttk.Label(button_frame,text='label2').grid(row=1,column=0)
+label1 = ttk.Label(button_frame,text='long labels label1').grid(row=0,column=0)
+label2 = ttk.Label(button_frame,text='label2').grid(row=1,column=0,sticky=tk.W) #right align
 label3 = ttk.Label(button_frame,text='label3').grid(row=2,column=0)
 
 # The grid_configure() function enables us to modify the UI elements before the main
