@@ -20,7 +20,8 @@ def _quit():
 #Adding message box
 
 def _message():
-    msg.showinfo('Hello buddy just trying to checkout the message box!!')
+    # msg.showinfo('Hello buddy just trying to checkout the message box!!')
+    msg.showwarning('Warning!!! Auchtung')
 
 
 
