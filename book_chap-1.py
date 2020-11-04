@@ -28,7 +28,7 @@ check_box1 = tk.Checkbutton(text='checked',state='disabled')
 check_box1.select()
 check_box1.grid(row=0,column=0)
 
-check_box2 = tk.Checkbutton(text='check it')
+check_box2 = tk.Checkbutton(text='check it',varible=number)
 check_box2.deselect()
 check_box2.grid(row=0,column=1)
 
