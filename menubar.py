@@ -21,7 +21,9 @@ def _quit():
 
 def _message():
     # msg.showinfo('Hello buddy just trying to checkout the message box!!')
-    msg.showwarning('Warning!!! Auchtung')
+    # msg.showwarning('Warning!!! Auchtung')
+    # msg.askokcancel('checking msgBox','Do u really want to quit')
+    msg.askyesnocancel('msgBox','want to quit')
 
 
 
