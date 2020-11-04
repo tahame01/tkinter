@@ -22,9 +22,12 @@ textVar.set('hello paikhana')
 
 # Remember that if you pack early u can't use further commands
 text = tk.Text(root,height=8)
-text.pack()
 text.focus()
 
+#check insert not capital
+text.insert('1.0','Please input something---')
+
+text.pack()
 label.pack()
 
 button =ttk.Button(root,text='submit').pack()
