@@ -1,0 +1,10 @@
+
+C:\Users\ahame\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\Scripts\pyinstaller
+
+# to give permissions to the Users-------------
+
+Set-ExecutionPolicy Unrestricted -Force
+
+
+## important if you don't want terminal to show
+pyinstaller -w <filename>
