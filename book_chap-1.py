@@ -50,14 +50,16 @@ win.title('test window')
 # color2='green'
 # color3='blue'
 
-# def rad_func():
-#     if rad_var.get()==1:win.configure(background=color1)
-#     elif rad_var.get()==2:win.configure(background=color2)
-#     else: win.configure(background=color3)
+
+colors=['blue','green','red']
+def rad_func():
+    if rad_var.get()==1:win.configure(background=colors[1])
+    elif rad_var.get()==2:win.configure(background=colors[2])
+    else: win.configure(background=colors[0])
 
 
 
-# rad_var = tk.IntVar()
+rad_var = tk.IntVar()
 
 # rad_button1 = tk.Radiobutton(win,text=color1,value=1,variable=rad_var,command=rad_func)
 # rad_button1.grid(row=0,column=0)
@@ -66,12 +68,15 @@ win.title('test window')
 # rad_button3 = tk.Radiobutton(win,text=color3,value=3,variable=rad_var,command=rad_func)
 # rad_button3.grid(row=0,column=2)
 
-scroled_text = scrolledtext.ScrolledText(width=33,height=9,wrap=tk.WORD)
-scroled_text.grid(row=0,columnspan=7)
-scroled_text.focus()
+# scroled_text = scrolledtext.ScrolledText(width=33,height=9,wrap=tk.WORD)
+# scroled_text.grid(row=0,columnspan=7)
+# scroled_text.focus()
 
 
 
+for color in range(3):
+     rad_button = tk.Radiobutton(win,text=colors[color],value=color,variable=rad_var,command=rad_func)
+     rad_button.grid(row=0,column=color)
 
 
 
